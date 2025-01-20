@@ -1,0 +1,36 @@
+# Basic project metadata
+[project]
+name = "sap_hana_to_snowflake_migration"
+version = "0.1.0"
+description = "A tool to migrate SAP HANA tables, views, and functions to Snowflake."
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+
+# Project dependencies
+dependencies = [
+    "fastapi>=0.99.0",
+    "uvicorn[standard]>=0.22.0",
+    "gunicorn==20.1.0",
+    "pydantic>=1.10.0",
+    "httpx>=0.24.0",
+    "python-dotenv>=1.0.0",
+    "boto3>=1.28.0",
+    "openai==0.28.1",
+    "redis==4.0.0",
+    "pyarmor==9.0.7",
+    "build==1.2.2.post1",
+    "hiredis==3.1.0"
+]
+
+# Build backend configuration
+[build-system]
+requires = ["setuptools>=68.1.2"]
+build-backend = "setuptools.build_meta"
+
+# Tool-specific configurations
+[tool.setuptools]
+packages = {find = {where = ["."]}} 
+
+[project.scripts]
+sap_hana_to_snowflake_migration = "app.__main__:main"
