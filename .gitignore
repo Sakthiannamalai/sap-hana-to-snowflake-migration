@@ -1,0 +1,39 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# FastAPI and Dependencies
+.venv/
+*.log
+
+
+# IDE Files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Byte-compiled files
+*.pyc
+
+# Virtual Environment
+venv/
+ENV/
+.env
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Unit Test / Coverage Reports
+htmlcov/
+.tox/
+.cache/
+.coverage
+*.cover
+.hypothesis/
+
+# Deployment Files
+*.secrets
+dist/
